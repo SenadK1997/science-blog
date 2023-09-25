@@ -1,7 +1,7 @@
 <article class="bg-white flex flex-col shadow my-4">
     <!-- Article Image -->
-    <a href="{{ route('view', $post) }}" class="hover:opacity-75">
-        <img src="{{$post->getThumbnail()}}">
+    <a href="{{ route('view', $post) }}" class="hover:opacity-75 aspect-video flex w-full max-h-56">
+        <img src="{{$post->getThumbnail()}}" class="aspect-video flex w-full object-cover object-top">
     </a>
     <div class="bg-white flex flex-col justify-start p-6">
         <div class="flex gap-4">
@@ -15,7 +15,7 @@
             {{ $post->title }}
         </a>
         <p href="#" class="text-sm pb-3">
-            By <a href="#" class="font-semibold hover:text-gray-800">{{ $post->user->name }}</a>, {{ $post->getFormattedDate() }}
+           Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
         </p>
         <a href="{{ route('view', $post) }}" class="pb-6">
             {{$post->shortBody() }}

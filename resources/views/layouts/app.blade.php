@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ $metaTitle ?: 'Balkanopedia' }}</title>
-    <meta name="author" content="Balkanopedia">
+    <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
+    <meta name="author" content="Balkanpedia">
     <meta name="description" content="{{ $metaDescription }}">
-
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -24,48 +23,15 @@
             margin-bottom: 1rem;
         }
     </style>
-
-    <!-- AlpineJS -->
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <!-- Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
 </head>
 <body class="bg-gray-50 font-family-karla">
-
-    <!-- Top Bar Nav -->
-    {{-- <nav class="w-full py-4 bg-blue-800 shadow">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-
-            <nav>
-                <ul class="flex items-center justify-between font-bold text-sm text-white uppercase no-underline">
-                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">Shop</a></li>
-                    <li><a class="hover:text-gray-200 hover:underline px-4" href="#">About</a></li>
-                </ul>
-            </nav>
-
-            <div class="flex items-center text-lg no-underline text-white pr-6">
-                <a class="" href="#">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a class="pl-6" href="#">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-        </div>
-
-    </nav> --}}
-
     <!-- Text Header -->
     <header class="w-full container mx-auto">
         <div class="flex flex-col items-center py-12">
             <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{ route('home') }}">
-                Balkanopedia
+                Balkanpedia
             </a>
             <p class="text-lg text-gray-600">
                 {{ \App\Models\TextWidget::getTitle('header') }}
@@ -86,23 +52,26 @@
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Home</a>
+                <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Početna</a>
                 @foreach ($categories as $category)
                     <a href="{{route('by-category', $category)}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">{{ $category->title }}</a>
                 @endforeach
-                <a href="{{route('about-us')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">About us</a>
+                {{-- <a href="{{route('about-us')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">About us</a> --}}
             </div>
         </div>
     </nav>
 
 
-    <div class="container mx-auto flex flex-wrap py-6">
+    <div class="container mx-auto flex flex-wrap py-6 justify-center">
         {{ $slot }}
     </div>
 
-    <footer class="w-full border-t bg-white pb-12">
-        <div class="w-full container mx-auto flex flex-col items-center">
-            <div class="uppercase pb-6">&copy; myblog.com</div>
+    <footer class="w-full border-t bg-white pb-0">
+        <div class="flex w-full container mx-auto justify-between items-center p-4 flex-col md:flex-row">
+            <div>&copy; All Rights Reserved</div>
+            <div class="flex">
+                <a href="https://www.linkedin.com/in/senad-kurtovi%C4%87-143742201/" target="_blank" class="text-blue-400">@Senad Kurtovic</a>
+            </div>
         </div>
     </footer>
 </body>

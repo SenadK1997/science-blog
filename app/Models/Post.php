@@ -15,6 +15,7 @@ class Post extends Model
     [
         'title', 
         'slug',
+        'author',
         'thumbnail',
         'body',
         'active',

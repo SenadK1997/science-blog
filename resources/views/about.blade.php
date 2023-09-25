@@ -1,4 +1,4 @@
-<x-app-layout meta-title="About Balkanopedia">
+<x-app-layout meta-title="About Balkanpedia">
     <section class="w-full flex flex-col items-center px-3">
 
         <article class="flex flex-col shadow my-4 w-full">

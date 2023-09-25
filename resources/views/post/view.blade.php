@@ -19,7 +19,7 @@
                     {{ $post->title }}
                 </h1>
                 <p href="#" class="text-sm pb-8">
-                    By <a href="#" class="font-semibold hover:text-gray-800">{{ $post->user->name }}</a>, {{ $post->getFormattedDate() }}
+                    Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
                 </p>
                 <div>
                     {!! $post->body !!}

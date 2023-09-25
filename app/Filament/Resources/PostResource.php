@@ -39,6 +39,9 @@ class PostResource extends Resource
                         Forms\Components\TextInput::make('slug')
                             ->required()
                             ->maxLength(2048),
+                            Forms\Components\TextInput::make('author')
+                            ->required()
+                            ->maxLength(2048),
                         Forms\Components\RichEditor::make('body')
                             ->required(),
                         Forms\Components\TextInput::make('meta_title')
@@ -67,6 +70,8 @@ class PostResource extends Resource
                 Tables\Columns\ImageColumn::make('thumbnail')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('title')
+                    ->searchable(),
+                    Tables\Columns\TextColumn::make('author')
                     ->searchable(),
                 // Tables\Columns\TextColumn::make('slug')
                 //     ->searchable(),
