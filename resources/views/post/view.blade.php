@@ -21,7 +21,7 @@
                 <p href="#" class="text-sm pb-8">
                     Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
                 </p>
-                <div>
+                <div class="flex flex-col gap-y-4">
                     {!! $post->body !!}
                 </div>
             </div>

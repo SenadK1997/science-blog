@@ -1,7 +1,7 @@
 <?php
 /** @var $posts \Illuminate\Pagination\LengthAwarePaginator */
 ?>
-<x-app-layout :meta-title="'Balkanpedia kateogrija' . $category->title" meta-description="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
+<x-app-layout :meta-title="'Balkanpedia ' . $category->title" meta-description="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
 <!-- Posts Section -->
 <section class="w-full md:w-2/3 flex flex-col items-center px-3 max-w-2xl">
 
