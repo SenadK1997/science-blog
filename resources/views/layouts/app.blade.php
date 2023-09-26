@@ -47,7 +47,7 @@
 <body class="bg-gray-50 font-family-karla">
     <!-- Text Header -->
     <header class="w-full container mx-auto">
-        <div class="flex flex-row items-center p-4">
+        <div class="flex flex-row items-center px-4 py-1">
             <img src="{{ asset('logo.png') }}" style="width: 50px;">
             <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
                 Balkanpedia
@@ -59,7 +59,7 @@
     </header>
 
     <!-- Topic Nav -->
-    <nav class="w-full py-4 border-t border-b bg-gray-100" x-data="{ open: false }">
+    <nav class="w-full py-1 px-4 border-t border-b bg-gray-100" x-data="{ open: false }">
         <div class="block sm:hidden">
             <a
                 href="#"

@@ -1,7 +1,7 @@
 <x-app-layout>
 <!--
   This example requires some changes to your config:
-  
+
   ```
   // tailwind.config.js
   module.exports = {
@@ -20,8 +20,8 @@
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Želite podijeliti svoj članak?</h2>
           <p class="mt-4 text-lg leading-8 text-gray-700">Ako imate interesantan članak koji želite podijeliti sa našom zajednicom, slobodno nas kontaktirajte! Radujemo se novim idejama i perspektivama. Pošaljite nam mail sa sažetkom vašeg članka, a mi ćemo vam se javiti u najkraćem mogućem roku.</p>
           <div class="mt-6 flex max-w-md gap-x-4">
-            <a href="mailto:infobalkanpedia@gmail.com?subject=Zahtjev za objavu&body=Poštovani/a, u prilogu Vam šaljem skraćenu verziju i cijelu verziju svog rada..." 
-                class="flex bg-indigo-400 justify-center min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-50 text-lg shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6">
+            <a href="mailto:infobalkanpedia@gmail.com?subject=Zahtjev za objavu&body=Poštovani/a, u prilogu Vam šaljem skraćenu verziju i cijelu verziju svog rada..."
+                class="flex bg-blue-700 justify-center min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-gray-50 text-lg shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-blue-600 sm:text-sm sm:leading-6">
                 Kontaktirajte nas
             </a>
           </div>
