@@ -22,6 +22,13 @@
             border-radius: 0.5rem;
             margin-bottom: 1rem;
         }
+        .font-family-optima {
+            font-family: 'Optima', sans-serif;
+        }
+        .optima-lowercase {
+            font-family: 'Optima', sans-serif;
+            text-transform: lowercase;
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9103637559448321"
@@ -40,13 +47,14 @@
 <body class="bg-gray-50 font-family-karla">
     <!-- Text Header -->
     <header class="w-full container mx-auto">
-        <div class="flex flex-col items-center py-12">
-            <a class="font-bold text-gray-800 uppercase hover:text-gray-700 text-5xl" href="{{ route('home') }}">
+        <div class="flex flex-row items-center p-4">
+            <img src="{{ asset('logo.png') }}" style="width: 50px;">
+            <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
                 Balkanpedia
             </a>
-            <p class="text-lg text-gray-600">
+            <!-- <p class="text-lg text-gray-600">
                 {{ \App\Models\TextWidget::getTitle('header') }}
-            </p>
+            </p> -->
         </div>
     </header>
 
@@ -58,12 +66,11 @@
                 class="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
                 @click="open = !open"
             >
-                Topics <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+                Kategorije <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
             </a>
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
             <div class="w-full container mx-auto flex flex-col sm:flex-row items-center justify-center text-sm font-bold uppercase mt-0 px-6 py-2">
-                <a href="{{route('home')}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">Početna</a>
                 @foreach ($categories as $category)
                     <a href="{{route('by-category', $category)}}" class="hover:bg-blue-600 hover:text-white rounded py-2 px-4 mx-2">{{ $category->title }}</a>
                 @endforeach

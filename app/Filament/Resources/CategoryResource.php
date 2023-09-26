@@ -33,7 +33,6 @@ class CategoryResource extends Resource
                 Forms\Components\TextInput::make('title')
                     ->required()
                     ->maxLength(2048)
-                    ->reactive()
                     ->afterStateUpdated(function($set, $state) use ($form) {
                         $set('slug', Str::slug($state));
                     }),
@@ -70,11 +69,11 @@ class CategoryResource extends Resource
                 Tables\Actions\CreateAction::make(),
             ]);
     }
-    
+
     public static function getPages(): array
     {
         return [
             'index' => Pages\ManageCategories::route('/'),
         ];
-    }    
+    }
 }
