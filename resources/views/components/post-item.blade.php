@@ -13,6 +13,7 @@
         </div>
         <a href="{{ route('view', $post) }}" class="text-3xl font-bold hover:text-gray-700 pb-4">
             {{ $post->title }}
+            <button>TTS</button>
         </a>
         <p href="#" class="text-sm pb-3">
            Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
