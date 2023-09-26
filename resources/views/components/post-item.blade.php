@@ -18,8 +18,8 @@
            Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
         </p>
         <a href="{{ route('view', $post) }}" class="pb-6">
-            {{$post->shortBody() }}
+            {!! strip_tags($post->shortBody(), '<p><br>') !!}
         </a>
-        <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Continue Reading <i class="fas fa-arrow-right"></i></a>
+        <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Nastavi čitati<i class="fas fa-arrow-right"></i></a>
     </div>
 </article>
