@@ -1,7 +1,8 @@
 <!-- Posts Section -->
-<section class="w-full md:w-2/3 flex flex-col items-center px-3">
+<section class="w-full md:w-3/4 flex flex-col items-center px-3">
 
-    <article class="flex flex-col shadow my-4">
+    <article class="flex flex-col shadow my-4 w-full">
+    TOO
         <!-- Article Image -->
         <a href="#" class="hover:opacity-75">
             <img src="https://source.unsplash.com/collection/1346951/1000x500?sig=1">

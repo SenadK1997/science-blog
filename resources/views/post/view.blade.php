@@ -1,8 +1,8 @@
-<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description">    
+<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description">
     <!-- Post Section -->
-    <section class="w-full md:w-2/3 flex flex-col items-center px-3">
+    <section class="w-full md:w-3/4 flex flex-col items-center px-3">
 
-        <article class="flex flex-col shadow my-4">
+        <article class="flex flex-col shadow my-4 w-full">
             <!-- Article Image -->
             <a href="#" class="hover:opacity-75">
                 <img src="{{$post->getThumbnail()}}">
@@ -32,7 +32,7 @@
                 @if($prev)
                     <a href="{{route('view', $prev)}}" class="block w-full bg-white shadow hover:shadow-md text-left p-6">
                         <p class="text-lg text-blue-800 font-bold flex items-center">
-                            <i class="fas fa-arrow-left pr-1"></i> 
+                            <i class="fas fa-arrow-left pr-1"></i>
                             Previous
                         </p>
                         <p class="pt-2">{{$prev->title}}</p>
@@ -43,7 +43,7 @@
                 @if($next)
                     <a href="{{route('view', $next)}}" class="block w-full bg-white shadow hover:shadow-md text-right p-6">
                         <p class="text-lg text-blue-800 font-bold flex items-center justify-end">
-                            Next 
+                            Next
                             <i class="fas fa-arrow-right pl-1"></i>
                         </p>
                         <p class="pt-2">{{ \Illuminate\Support\Str::words($next->title, 5) }}</p>
