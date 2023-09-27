@@ -5,7 +5,7 @@
         <article class="flex flex-col shadow my-4 w-full">
             <!-- Article Image -->
             <a href="#" class="hover:opacity-75">
-                <img src="{{$post->getThumbnail()}}">
+                <img src="{{$post->getThumbnail()}}" alt="article_image">
             </a>
             <div class="bg-white flex flex-col justify-start p-6">
                 <div class="flex gap-4">
