@@ -81,7 +81,7 @@
                 class="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
                 @click="open = !open"
             >
-                Kategorije <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+                Kategorije <i :class="open ? 'fa-chevron-up': 'fa-chevron-down'" class="fas ml-2"></i>
             </a>
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">

@@ -20,6 +20,6 @@
         <a href="{{ route('view', $post) }}" class="pb-6">
             {!! strip_tags($post->shortBody(), '<p><br>') !!}
         </a>
-        <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Nastavi čitati<i class="fas fa-arrow-right"></i></a>
+        <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Nastavi čitati<i class="fas fa-arrow-right ml-1"></i></a>
     </div>
 </article>
