@@ -56,7 +56,7 @@
                     Balkanpedia
                 </a>
             </div>
-            <div class="flex-1 flex gap-4">
+            {{-- <div class="flex-1 flex gap-4">
                 <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('bilten') }}">
                     Bilten
                 </a>
@@ -65,7 +65,7 @@
                 </a>
                 <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('publish') }}">
                     Objavi Rad
-                </a>
+                </a> --}}
             </div>
             <!-- <p class="text-lg text-gray-600">
                 {{ \App\Models\TextWidget::getTitle('header') }}
