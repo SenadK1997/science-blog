@@ -98,7 +98,7 @@
     <div class="container mx-auto flex flex-wrap py-6 justify-center">
         {{ $slot }}
     </div>
-    @include('cookie-consent::index')
+        @include('cookie-consent::index')
     <footer class="w-full border-t bg-white pb-0">
         <div class="flex w-full container mx-auto justify-between items-center p-4 flex-col md:flex-row">
             <div>&copy; All Rights Reserved</div>
