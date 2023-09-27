@@ -51,7 +51,7 @@
     <header class="w-full container mx-auto">
         <div class="flex flex-row items-center px-4 py-1 gap-8">
             <div class="flex items-center gap-1">
-                <img src="{{ asset('logo.png') }}" style="width: 50px;" alt="page_logo">
+                <img src="{{ asset('logo.png') }}" style="width: 50px;" alt="page_logo" width="1280" height="720">
                 <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
                     Balkanpedia
                 </a>
