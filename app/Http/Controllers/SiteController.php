@@ -29,7 +29,6 @@ class SiteController extends Controller
 
     public function bilten()
     {
-        dd('tito');
-        return redirect()->route('bilten');
+        return view('bilten');
     }
 }
