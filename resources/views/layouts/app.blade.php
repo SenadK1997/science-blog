@@ -7,7 +7,7 @@
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
     <meta name="description" content="{{ $metaDescription }}">
-    <meta name="og:image" content="{{ $metaImage }}">
+    <meta property="og:image" content="{{ $metaImage }}">
 
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
