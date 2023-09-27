@@ -1,4 +1,4 @@
-<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description">
+<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description" :meta-image="$post->getThumbnail()">
     <!-- Post Section -->
     <section class="w-full md:w-3/4 flex flex-col items-center px-3">
 
