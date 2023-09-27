@@ -12,7 +12,7 @@
             @endforeach
         </div>
         <div class="w-full">
-            <a href="/objavi-clanak" class="flex justify-center bg-blue-500 text-xl w-full hover:bg-blue-600 text-white rounded py-2">Objavi članak</a>
+            <a href="{{ route('publish') }}" class="flex justify-center bg-blue-500 text-xl w-full hover:bg-blue-600 text-white rounded py-2">Objavi Rad</a>
         </div>
     </section>
 </aside>

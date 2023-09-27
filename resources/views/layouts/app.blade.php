@@ -55,16 +55,13 @@
                 </a>
             </div>
             <div class="flex-1 flex gap-4">
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
+                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('bilten') }}">
                     Bilten
-                </a>
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
-                    Podcast
                 </a>
                 <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
                     O nama
                 </a>
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
+                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('publish') }}">
                     Objavi Rad
                 </a>
             </div>

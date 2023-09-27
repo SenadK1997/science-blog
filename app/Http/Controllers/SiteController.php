@@ -20,8 +20,16 @@ class SiteController extends Controller
         }
         return view('about', compact('widget'));
     }
+
     public function publish(): View
     {
         return view('publish');
+    }
+
+
+    public function bilten()
+    {
+        dd('tito');
+        return redirect()->route('bilten');
     }
 }

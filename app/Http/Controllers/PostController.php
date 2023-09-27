@@ -64,7 +64,7 @@ class PostController extends Controller
                 ->orderBy('published_at', 'asc')
                 ->limit(1)
                 ->first();
-        return view('post.view', compact('post', 'prev', 'next')); 
+        return view('post.view', compact('post', 'prev', 'next'));
     }
 
     public function byCategory(Category $category)
