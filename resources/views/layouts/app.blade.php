@@ -7,6 +7,8 @@
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
     <meta name="description" content="{{ $metaDescription }}">
+    <meta name="og:image" content="{{ $metaImage }}">
+
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -47,11 +49,24 @@
 <body class="bg-gray-50 font-family-karla">
     <!-- Text Header -->
     <header class="w-full container mx-auto">
-        <div class="flex flex-row items-center px-4 py-1">
-            <img src="{{ asset('logo.png') }}" style="width: 50px;">
-            <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
-                Balkanpedia
-            </a>
+        <div class="flex flex-row items-center px-4 py-1 gap-8">
+            <div class="flex items-center gap-1">
+                <img src="{{ asset('logo.png') }}" style="width: 50px;">
+                <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
+                    Balkanpedia
+                </a>
+            </div>
+            <div class="flex-1 flex gap-4">
+                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('bilten') }}">
+                    Bilten
+                </a>
+                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
+                    O nama
+                </a>
+                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('publish') }}">
+                    Objavi Rad
+                </a>
+            </div>
             <!-- <p class="text-lg text-gray-600">
                 {{ \App\Models\TextWidget::getTitle('header') }}
             </p> -->
