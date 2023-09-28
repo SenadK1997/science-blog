@@ -4,7 +4,7 @@
         <article class="flex flex-col shadow my-4 w-full">
             <!-- Article Image -->
             <a href="#" class="hover:opacity-75">
-                <img src="/storage/{{ $widget->image }}" class="max-w-full">
+                <img src="/storage/{{ $widget->image }}" class="max-w-full" alt="widget" width="1280" height="720">
             </a>
             <div class="bg-white flex flex-col justify-start p-6">
                 <h1 class="text-3xl font-bold hover:text-gray-700 pb-4">

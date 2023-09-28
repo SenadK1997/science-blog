@@ -7,6 +7,8 @@
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
     <meta name="description" content="{{ $metaDescription }}">
+    <meta property="og:image" content="{{ $metaImage }}">
+
     <!-- Tailwind -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
     <style>
@@ -49,7 +51,7 @@
     <header class="w-full container mx-auto">
         <div class="flex flex-row items-center px-4 py-1 gap-8">
             <div class="flex items-center gap-1">
-                <img src="{{ asset('logo.png') }}" style="width: 50px;">
+                <img src="{{ asset('logo.png') }}" style="width: 50px;" alt="page_logo" width="1280" height="720">
                 <a class="text-gray-800 hover:text-gray-700 optima-lowercase text-3xl font-medium" href="{{ route('home') }}">
                     Balkanpedia
                 </a>
@@ -79,7 +81,7 @@
                 class="md:hidden text-base font-bold uppercase text-center flex justify-center items-center"
                 @click="open = !open"
             >
-                Kategorije <i :class="open ? 'fa-chevron-down': 'fa-chevron-up'" class="fas ml-2"></i>
+                Kategorije <i :class="open ? 'fa-chevron-up': 'fa-chevron-down'" class="fas ml-2"></i>
             </a>
         </div>
         <div :class="open ? 'block': 'hidden'" class="w-full flex-grow sm:flex sm:items-center sm:w-auto">
@@ -96,7 +98,7 @@
     <div class="container mx-auto flex flex-wrap py-6 justify-center">
         {{ $slot }}
     </div>
-
+        @include('cookie-consent::index')
     <footer class="w-full border-t bg-white pb-0">
         <div class="flex w-full container mx-auto justify-between items-center p-4 flex-col md:flex-row">
             <div>&copy; All Rights Reserved</div>

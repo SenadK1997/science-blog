@@ -11,7 +11,8 @@
         "laravel/framework": "^10.10",
         "laravel/sanctum": "^3.2",
         "laravel/tinker": "^2.8",
-        "mohamedsabil83/filament-forms-tinyeditor": "^2.0"
+        "mohamedsabil83/filament-forms-tinyeditor": "^2.0",
+        "spatie/laravel-cookie-consent": "^3.2"
     },
     "require-dev": {
         "doctrine/dbal": "*",

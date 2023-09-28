@@ -1,11 +1,11 @@
-<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description" :meta-image="$post->getThumbnail()">
+<x-app-layout :meta-title="$post->meta_title ?: $post->title" :meta-description="$post->meta_description" :meta-image="'https://balkanpedia.com'.$post->getThumbnail()">
     <!-- Post Section -->
     <section class="w-full md:w-3/4 flex flex-col items-center px-3">
 
         <article class="flex flex-col shadow my-4 w-full">
             <!-- Article Image -->
             <a href="#" class="hover:opacity-75">
-                <img src="{{$post->getThumbnail()}}">
+                <img src="{{$post->getThumbnail()}}" alt="article_image" width="1280" height="720">
             </a>
             <div class="bg-white flex flex-col justify-start p-6">
                 <div class="flex gap-4">
