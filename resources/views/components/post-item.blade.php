@@ -13,6 +13,7 @@
         </div>
         <a href="{{ route('view', $post) }}" class="text-3xl font-bold hover:text-gray-700 pb-4">
             {{ $post->title }}
+            <button>TTS</button>
         </a>
         <p href="#" class="text-sm pb-3">
            Autor: <a href="#" class="font-semibold hover:text-gray-800">{{ $post->author }}</a>, {{ $post->getFormattedDate() }}
@@ -20,6 +21,8 @@
         <a href="{{ route('view', $post) }}" class="pb-6">
             {!! strip_tags($post->shortBody(), '<p><br>') !!}
         </a>
-        <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Nastavi čitati<i class="fas fa-arrow-right ml-1"></i></a>
+        <div class="flex items-center w-full justify-between">
+            <a href="{{ route('view', $post) }}" class="uppercase text-gray-800 hover:text-black">Nastavi čitati<i class="fas fa-arrow-right ml-1"></i></a>
+        </div>
     </div>
 </article>

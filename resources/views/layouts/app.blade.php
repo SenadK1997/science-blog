@@ -38,12 +38,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SHCHX9Y66V"></script>
+    @stack('scripts')
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-SHCHX9Y66V');
+        var host = window.location.hostname;
+    if(host != "127.0.0.1") {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        console.log('Triggers the event')
+        gtag('config', 'G-SHCHX9Y66V');
+    }
     </script>
 </head>
 <body class="bg-gray-50 font-family-karla">
@@ -56,19 +60,21 @@
                     Balkanpedia
                 </a>
             </div>
-            {{-- <div class="flex-1 flex gap-4">
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('bilten') }}">
+            <div class="flex-1 flex gap-4">
+                {{-- href="{{ route('bilten') }}" --}}
+                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Uskoro...">
                     Bilten
                 </a>
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('home') }}">
+                {{-- href="{{ route('home') }}" --}}
+                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Uskoro...">
                     O nama
                 </a>
-                <a class="text-gray-800 hover:text-gray-700 font-medium uppercase" href="{{ route('publish') }}">
+                <a class="text-gray-800 hover:text-blue-600 font-medium uppercase" href="{{ route('publish') }}">
                     Objavi Rad
-                </a> --}}
+                </a>
             </div>
             <!-- <p class="text-lg text-gray-600">
-                {{ \App\Models\TextWidget::getTitle('header') }}
+                {{-- {{ \App\Models\TextWidget::getTitle('header') }} --}}
             </p> -->
         </div>
     </header>

@@ -42,7 +42,7 @@ class PostResource extends Resource
                             Forms\Components\TextInput::make('author')
                             ->required()
                             ->maxLength(2048),
-                        TinyEditor::make('body')
+                            TinyEditor::make('body')
                             ->required(),
                         Forms\Components\TextInput::make('meta_title')
                             ->maxLength(255),
