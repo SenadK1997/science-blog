@@ -1,7 +1,7 @@
 <?php
 /** @var $posts \Illuminate\Pagination\LengthAwarePaginator */
 ?>
-<x-app-layout :meta-description="$posts->shortBody()">
+<x-app-layout meta-description="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
 <!-- Posts Section -->
 <section class="w-full md:w-3/4 flex flex-col items-center px-3">
     @foreach ($posts as $post)
