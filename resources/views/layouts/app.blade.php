@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
-    <meta property="og:description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
+    {{-- <meta property="og:description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci"> --}}
+    <meta property="og:description" content="{{ $metaDescription }}">
     <meta name="description" content="{{ $metaDescription }}">
     {{-- <meta name="description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci"> --}}
     <meta property="og:image" content="{{ $metaImage }}">
