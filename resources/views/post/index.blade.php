@@ -1,7 +1,7 @@
 <?php
 /** @var $posts \Illuminate\Pagination\LengthAwarePaginator */
 ?>
-<x-app-layout :meta-title="'Balkanpedia ' . $category->title" meta-description="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci" :meta-image="$posts[0]->getThumbnail()">
+<x-app-layout :meta-title="'Balkanpedia ' . $category->title" :meta-description="$posts[0]->shortBody()" :meta-image="$posts[0]->getThumbnail()">
 <!-- Posts Section -->
 <section class="w-full md:w-3/4 flex flex-col items-center px-3">
 

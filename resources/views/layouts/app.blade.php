@@ -7,8 +7,8 @@
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
     <meta property="og:description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
-    {{-- <meta name="description" content="{{ $metaDescription }}"> --}}
-    <meta name="description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
+    <meta name="description" content="{{ $metaDescription }}">
+    {{-- <meta name="description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci"> --}}
     <meta property="og:image" content="{{ $metaImage }}">
 
     <!-- Tailwind -->
