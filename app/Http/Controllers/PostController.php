@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Illuminate\Support\Facades\URL;
 
 class PostController extends Controller
 {
@@ -45,6 +46,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $currentUrl = URL::current();
         if(!$post->active || $post->published_at > Carbon::now()) {
             throw new NotFoundHttpException();
         }
@@ -64,7 +66,7 @@ class PostController extends Controller
                 ->orderBy('published_at', 'asc')
                 ->limit(1)
                 ->first();
-        return view('post.view', compact('post', 'prev', 'next'));
+        return view('post.view', compact('post', 'prev', 'next', 'currentUrl'));
     }
 
     public function byCategory(Category $category)
