@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ $metaTitle ?: 'Balkanpedia' }}</title>
     <meta name="author" content="Balkanpedia">
-    <meta name="description" content="{{ $metaDescription }}">
+    <meta property="og:description" content="{{ $metaDescription }}">
+    {{-- <meta name="description" content="{{ $metaDescription }}"> --}}
     <meta property="og:image" content="{{ $metaImage }}">
 
     <!-- Tailwind -->
@@ -62,7 +63,7 @@
             </div>
             <div class="flex-1 flex gap-4 items-center">
                 {{-- href="{{ route('bilten') }}" --}}
-                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Uskoro...">
+                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Zapratite našu stranicu">
                     Bilten
                 </a>
                 {{-- href="{{ route('home') }}" --}}
