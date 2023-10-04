@@ -66,9 +66,9 @@
                     Bilten
                 </a>
                 {{-- href="{{ route('home') }}" --}}
-                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Uskoro...">
+                {{-- <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Uskoro...">
                     O nama
-                </a>
+                </a> --}}
                 <a class="text-gray-800 hover:text-blue-600 font-medium uppercase" href="{{ route('publish') }}">
                     Objavi Rad
                 </a>

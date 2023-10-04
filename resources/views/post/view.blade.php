@@ -16,7 +16,7 @@
                     </a>
                     @endforeach
                     <div id="copySuccessMessage" class="hidden bg-green-500 text-white py-2 px-4 rounded fixed bottom-4 right-4 z-50">
-                        Link copied successfully!
+                        Uspješno kopirana poveznica!
                     </div>
                     <div class="relative">
                         <button id="shareButton" class="sharebtn items-center relative flex bg-white border rounded-md p-2 opacity-100 focus:outline-none focus:border-blue-400" title="click to enable menu">
