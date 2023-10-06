@@ -63,8 +63,7 @@
                 </a>
             </div>
             <div class="flex-1 flex gap-4 items-center">
-                {{-- href="{{ route('bilten') }}" --}}
-                <a class="text-gray-800 hover:text-gray-700 opacity-30 font-medium uppercase" title="Zapratite našu stranicu">
+                <a href="{{ route('bilten') }}" class="text-gray-800 hover:text-gray-700 font-medium uppercase" title="Zapratite našu stranicu">
                     Bilten
                 </a>
                 {{-- href="{{ route('home') }}" --}}
