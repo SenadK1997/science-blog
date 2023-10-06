@@ -1,4 +1,7 @@
 <x-email-layout>
+    @php
+        $posts = App\Models\Post::latest('published_at')->take(5)->get();
+    @endphp
     <section class="max-w-2xl px-6 py-8 mx-auto bg-white dark:bg-gray-900">
         <header class="flex items-center justify-between ">
             <div class="flex items-center gap-1">
@@ -9,7 +12,7 @@
             </div>
         </header>
         @foreach ($posts as $post)
-            <x-email-item :posts="$posts"></x-email-item>
+            <x-email-item :post="$post"></x-email-item>
         @endforeach
     </section>
 </x-email-layout>
