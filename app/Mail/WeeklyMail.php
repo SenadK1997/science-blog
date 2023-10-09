@@ -12,13 +12,15 @@ use Illuminate\Queue\SerializesModels;
 class WeeklyMail extends Mailable
 {
     use Queueable, SerializesModels;
-
+    
+    protected $token;
+    
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($token)
     {
-        //
+        $this->token = $token;
     }
     public function build()
     {

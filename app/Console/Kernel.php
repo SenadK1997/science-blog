@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
     {
         $schedule->command('send:weekly-emails')
                 ->mondays()
-                ->at('12:00'); // Adjust the time as per your preference
+                ->at('09:00'); // Adjust the time as per your preference
     }
     protected $commands = [
         // ...
