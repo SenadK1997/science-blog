@@ -12,8 +12,14 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->command('send:weekly-emails')
+                ->mondays()
+                ->at('09:00'); // Adjust the time as per your preference
     }
+    protected $commands = [
+        // ...
+        Commands\SendWeeklyEmails::class,
+    ];
 
     /**
      * Register the commands for the application.
