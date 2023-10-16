@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Subscription;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -13,18 +14,19 @@ class WeeklyMail extends Mailable
 {
     use Queueable, SerializesModels;
     
-    protected $token;
-    
+    public string $subscription;
+
     /**
      * Create a new message instance.
      */
-    public function __construct($token)
+    public function __construct(string $subscription)
     {
-        $this->token = $token;
+        $this->subscription = $subscription;
     }
     public function build()
     {
-        return $this->view('emails.weekly');
+        $subscription = $this->subscription;
+        return $this->view('emails.weekly', ['subscription' => $subscription]);
     }
 
     /**

@@ -9,6 +9,7 @@
     <meta property="og:description" content="{{ $metaDescription }}"> --}}
     {{-- <meta name="description" content="{{ $metaDescription }}"> --}}
     <meta name="description" content="Balkanpedia, stranica u kojoj se objavljuju naučno-istraživački članci">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- <meta property="og:image" content="{{ $metaImage }}"> --}}
 
     <!-- Tailwind -->

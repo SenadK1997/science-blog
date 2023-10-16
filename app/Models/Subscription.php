@@ -12,17 +12,21 @@ class Subscription extends Model
     protected $fillable = ['email', 'subscribed'];
     
     public function unsubscribe($token)
-    {
-        $subscription = Subscription::where('token', $token)->first();
-
-        if ($subscription) {
-            $subscription->subscribed = false;
-            $subscription->save();
-
-            return redirect()->route('home')->with('success', 'You have successfully unsubscribed.');
+    {   
+        $email = decrypt($token);
+        $subscription = Subscription::where('email', $email)->pluck('email')->first();
+        if (!$subscription) {
+            return redirect()->route('home')->with('message', 'Email adresa pogrešna');
         }
-
-        return redirect()->route('home')->with('error', 'Invalid unsubscribe link.');
+        return view('unsubscribe', ['subscription' => $subscription]);
+    }
+    public function unsubscribeMail($token)
+    {
+        $subscribedEmail = decrypt($token);
+        $subscription = Subscription::where('email', $subscribedEmail)->first();
+        $subscription->subscribed = false;
+        $subscription->save();
+        return redirect()->route('home')->with('message', 'Nedostajat ćete nam!');
     }
 
 }

@@ -25,14 +25,17 @@
         @endforeach
         <footer class="w-full border-t bg-white pb-0">
             <div class="flex w-full container mx-auto justify-between items-center p-4 flex-col md:flex-row">
-                <div>&copy; All Rights Reserved</div>
-                <div class="flex">
-                    <a href="https://www.linkedin.com/in/senad-kurtovi%C4%87-143742201/" target="_blank" class="text-blue-400">@Senad Kurtovic</a>
+                <div class="flex flex-col">
+                    <div>&copy; All Rights Reserved</div>
+                    <div class="flex">
+                        <a href="https://www.linkedin.com/in/senad-kurtovi%C4%87-143742201/" target="_blank" class="text-blue-400">@Senad Kurtovic</a>
+                    </div>
                 </div>
-                <form method="POST" action="{{ route('unsubscribe', $token) }}">
+                {{-- <form method="POST" action="{{ route('unsubscribe', $subscription) }}" target="_blank">
                     @csrf
-                    <button>Unsubscribe</button>
-                </form>
+                    <button type="submit" class="text-sm">Unsubscribe</button>
+                </form> --}}
+                <a href="{{ route('unsubscribe', ['token' => $subscription]) }}" class="text-sm" target="__blank">Unsubscribe</a>
             </div>
         </footer>
     </section>

@@ -29,10 +29,10 @@ class SendWeeklyEmail implements ShouldQueue
      */
     public function handle(): void
     {
-        $subscriptions = Subscription::where('subscribed', true)->pluck('email');
+        // $subscriptions = Subscription::where('subscribed', true)->pluck('email');
 
-        foreach ($subscriptions as $subscription) {
-            Mail::to($subscription->email)->send(new WeeklyMail($subscription->token));
-        }
+        // foreach ($subscriptions as $subscription) {
+        //     Mail::to($subscription)->send(new WeeklyMail($subscription));
+        // }
     }
 }

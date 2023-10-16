@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
+use App\Models\Subscription;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,7 @@ Route::get('/ads.txt', function(){
 Route::get('/bilten', [SiteController::class, 'bilten'])->name('bilten');
 Route::post('/bilten', [SiteController::class, 'subscribe'])->name('subscribe');
 Route::get('/{post:slug}', [PostController::class, 'show'])->name('view');
-Route::post('/unsubscribe{token}', [Subscription::class, 'unsubscribe'])->name('unsubscribe');
+Route::get('/unsubscribe/{token}', [Subscription::class, 'unsubscribe'])->name('unsubscribe');
+Route::post('/unsubscribe/{token}', [Subscription::class, 'unsubscribeMail'])->name('unsubscribe.email');
 // Route::get('/about-us', [SiteController::class, 'about'])->name('about-us');
 

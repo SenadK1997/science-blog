@@ -16,9 +16,9 @@ class SendWeeklyEmails extends Command
     public function handle()
     {
         $subscribedEmails = Subscription::where('subscribed', true)->pluck('email');
-
         foreach ($subscribedEmails as $email) {
-            Mail::to($email)->send(new WeeklyMail());
+            $token = encrypt($email);
+            Mail::to($email)->send(new WeeklyMail($token));
             $this->info("Sent email to: $email");
         }
     }
