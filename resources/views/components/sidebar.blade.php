@@ -6,7 +6,7 @@
             </h3>
             @foreach ($categories as $category)
                 <a href="{{route('by-category', $category)}}"
-                class="justify-between hover:bg-blue-400 text-semibold block px-2 py-1 rounded text-sm {{ request('category')?->slug === $category->slug ? 'bg-blue-600 text-white' : '' }}">
+                class="flex justify-between hover:bg-blue-400 text-semibold px-2 py-1 rounded text-sm {{ request('category')?->slug === $category->slug ? 'bg-blue-600 text-white' : '' }}">
                     <span>{{ $category->title }}</span> <span>{{$category->total}}</span>
                 </a>
             @endforeach
