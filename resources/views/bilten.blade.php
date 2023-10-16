@@ -2,8 +2,8 @@
    <div class="bg-gray-50 flex justify-center flex-col py-60 lg:py-48 mx-auto">
       <div class="mx-auto max-w-7xl gap-10 px-6 flex flex-col gap-y-4">
          <div class="max-w-xl text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl lg:col-span-7">
-            <h2 class="inline sm:block lg:inline xl:block">Want product news and updates?</h2>
-            <p class="inline sm:block lg:inline xl:block">Sign up for our newsletter.</p>
+            <h2 class="inline sm:block lg:inline xl:block">Želite biti ažurni?</h2>
+            <p class="inline sm:block lg:inline xl:block">Prijavite se za naš bilten.</p>
          </div>
          @if(session('message'))
             <div class="alert alert-success">
