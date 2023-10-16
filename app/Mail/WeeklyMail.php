@@ -9,6 +9,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Address;
 
 class WeeklyMail extends Mailable
 {
@@ -35,6 +36,7 @@ class WeeklyMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
+            from: new Address('info@balkanpedia.com', 'Balkanpedia'),
             subject: 'Weekly Mail',
         );
     }
